@@ -25,6 +25,11 @@ public class MainActivity extends Activity {
                 .setUsage(AudioAttributes.USAGE_GAME)
                 .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                 .build();
+        sounds = new SoundPool.Builder()
+                .setAudioAttributes(attributes)
+                .build();
+        loadSounds();
+        blood_image = findViewById(R.id.imageView2);
     }
 
 
